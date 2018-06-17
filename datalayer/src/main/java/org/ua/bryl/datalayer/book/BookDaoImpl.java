@@ -4,43 +4,40 @@ import org.springframework.stereotype.Repository;
 import org.springframework.validation.annotation.Validated;
 import org.ua.bryl.datalayer.AbstractDAO;
 import org.ua.bryl.model.Book;
-
+import java.util.Collections;
+import java.util.List;
+import javax.transaction.Transactional;
 /**
  * Created by Sweet on 05.03.2017.
  */
 @Repository
-public class BookDaoImpl  extends AbstractDAO<Book> implements BookDAO{
-    public BookDaoImpl(Class<Book> type) {
-        super(type);
-    }
-
-    public Book createBook() {
-        return new Book ();
-    }
-
+public class BookDaoImpl extends AbstractDAO<Book> implements BookDAO{
+    @Transactional
     @Override
-    public Book createBook(@Validated Book book) {
-        return null;
-    }
-
-    @Override
-    public void getAllBooks(Book books) {
+    public Book create(Book book) {
+        return super.create(book);
 
     }
+
 
 
     @Override
-    public Book getBook(int codeNo) { return null; }
-
-    @Override
-    public void updateBook(Book book) {
-
+    public List<Book> getAll() {
+        return Collections.EMPTY_LIST;
     }
 
     @Override
-    public void deleteBook(Book book) {
-
+    public Book get(long id) {
+        return this.get(id);
     }
 
+    @Override
+    public boolean update(Book book) {
+        return true;
+    }
 
+    @Override
+    public void delete(long id) {
+
+    }
 }

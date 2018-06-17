@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="org.apache.maven.archetypes:maven-archetype-webapp:1.0" type="repository">
+    <properties maven-id="org.apache.maven.archetypes:maven-archetype-webapp:1.0" />
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/maven-archetype-webapp-1.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

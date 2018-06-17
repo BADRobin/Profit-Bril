@@ -1,5 +1,4 @@
 package org.ua.bryl.datalayer.category;
-import org.springframework.stereotype.Repository;
 import org.ua.bryl.model.Category;
 
 import java.util.List;
@@ -7,9 +6,9 @@ import java.util.List;
  * Created by Sweet on 05.03.2017.
  */
 public interface CategoryDAO {
-    public Category createCategory ();
-    public List<Category> getAllCategorys();
-    public Category getCategory(int codeNo);
-    public void updateCategory(Category category);
-    public void deleteCategory(Category category);
+     Category create (Category category);
+     List<Category> getAll();
+     Category get(long id);
+     boolean update(Category category);
+     void delete(long id);
 }

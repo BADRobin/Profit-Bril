@@ -1,38 +1,39 @@
 package org.ua.bryl.datalayer.author;
-
 import org.springframework.stereotype.Repository;
 import org.ua.bryl.datalayer.AbstractDAO;
 import org.ua.bryl.model.Author;
-
+import javax.transaction.Transactional;
+import java.util.Collections;
 import java.util.List;
 
 @Repository
-public  class AuthorDaoImpl extends AbstractDAO<Author>  implements AuthorDAO {
-    public AuthorDaoImpl(Class<Author> type) {
-        super(type);
-    }
+public class AuthorDaoImpl extends AbstractDAO<Author> implements AuthorDAO {
 
-    public Author createAuthor() {
-        return new Author ();
-    }
-
+    @Transactional
     @Override
-    public List<Author> getAllAuthors() {
-        return null;
-    }
-
-    @Override
-    public Author getAuthors(int codeNo) {
-        return null;
-    }
-
-    @Override
-    public void updateAuthor(Author author) {
+    public Author create(Author author) {
+        return super.create(author);
 
     }
 
     @Override
-    public void deleteAuthor(Author author) {
+    public List<Author> getAll() {
+        return Collections.EMPTY_LIST;
+    }
+
+    @Override
+    public Author get(long id) {
+        return this.get(id);
+    }
+
+    @Override
+    public boolean update(Author author) {
+
+        return true;
+    }
+
+    @Override
+    public void delete(long id) {
 
     }
 
